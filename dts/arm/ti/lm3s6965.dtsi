@@ -46,6 +46,16 @@
 			status = "disabled";
 			label = "UART_2";
 		};
+
+		spi0: spi@40008000 {
+			compatible = "ti,stellaris-spi";
+			reg = <0x40008000 0x24>;
+			interrupts = <7 3>;
+			label = "SPI_0";
+			#address-cells = <1>;
+			#size-cells = <0>;
+		};
+
 	};
 };
 

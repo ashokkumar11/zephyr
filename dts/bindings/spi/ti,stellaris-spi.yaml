@@ -1,0 +1,35 @@
+#
+# Copyright (c) 2018, Zilogic Systems
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+---
+title: Ti Stellaris
+id: ti,stellaris-spi
+version: 0.1
+
+description: >
+    This binding gives a base representation of the LM3S6965 SPI controller
+
+inherits:
+    !include spi.yaml
+
+properties:
+    compatible:
+      type: string
+      category: required
+      description: compatible strings
+      constraint: "ti,stellaris-spi"
+
+    reg:
+      type: array
+      description: mmio register space
+      generation: define
+      category: required
+
+    interrupts:
+      type: array
+      category: required
+      description: required interrupts
+      generation: define
+...
